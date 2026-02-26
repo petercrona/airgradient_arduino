@@ -46,8 +46,10 @@ private:
   void *_noxAlgorithm;
   const BoardDef *bsp = nullptr;
   BoardType _boardType;
-  uint16_t defaultRh = 0x8000;
-  uint16_t defaultT = 0x6666;
+  static constexpr uint16_t defaultConditioningRh = 0x8000;
+  static constexpr uint16_t defaultConditioningT = 0x6666;
+  uint16_t defaultRh = defaultConditioningRh;
+  uint16_t defaultT = defaultConditioningT;
   int tvoc = 0;
   int tvocRaw;
   int nox = 0;

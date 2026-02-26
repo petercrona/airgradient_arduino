@@ -305,7 +305,9 @@ bool Sgp41::isBegin(void) {
 bool Sgp41::_noxConditioning(void) {
   uint16_t err;
   uint16_t srawVoc;
-  err = sgpSensor()->executeConditioning(defaultRh, defaultT, srawVoc);
+  err = sgpSensor()->executeConditioning(defaultConditioningRh,
+                                         defaultConditioningT,
+                                         srawVoc);
   return (err == 0);
 }
 
